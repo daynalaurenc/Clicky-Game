@@ -1,0 +1,18 @@
+
+.card {
+  background: white;
+  border-radius: 2px;
+  height: 200px;
+  width: 200px;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  margin-bottom: 15px;
+}
+
+.card-container {
+  margin-top: 200px;
+}
+
+img:hover {
+  animation: shake 0.5s; 
+  animation-iteration-count: infinite; 
+}
