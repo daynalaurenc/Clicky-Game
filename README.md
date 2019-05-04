@@ -1,4 +1,4 @@
-# Memory Game | Warriors
+# Memory Game | Golden State Warriors
 
 is a simple memory game, built with React.js.
 
