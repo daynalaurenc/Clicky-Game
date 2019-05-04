@@ -10,9 +10,11 @@ hr {
     margin:10;
 }
 h1 {
-    font-size: 35px;
-    font-family: 'Coda Caption', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
     margin-bottom: 20px;
+    letter-spacing: 1.5px;
 }
 
 p {
@@ -21,4 +23,11 @@ p {
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 3px;
+}
+
+#logo {
+    margin-top: -50px;
+    height: 350px;
+    /* width: 250px; */
+    margin-bottom: 40px;
 }
