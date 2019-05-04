@@ -2,39 +2,44 @@ import React, { Component } from "react";
 import PlayerCard from "./components/PlayerCard";
 import Wrapper from "./components/Wrapper";
 // import Title from "./components/Title";
-import player from "./players.json";
+import players from "./players.json";
 import Jumbotron from "./components/Jumbotron";
 // import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import "./App.css";
 
+function shuffleFriends(array) {
+  for(let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], [array[j]] = [array[j], [array[i]];
+  }
+  return array;
+}
+
 class App extends Component {
   // Setting this.state.friends to the players json array
   state = {
-    player,
+    players,
     clickedPlayer: [],
-    score: 0,
+    currentScore: 0,
+    topScore: 0,
+    rightWrong: "",
   };
 
   //When you click on a card... the player is taken out of the array.
-  imageClick = event => {
-    const currentPlayer = event.target.alt;
-    const playerAlreadyClicked =
-      this.state.clickedPlayer.indexOf(currentPlayer) > -1;
+  handleClick = id => {
+    if (this.state.clickedPlayer.indexOf(id) === -1){
+      this.handleIncrement();
+      this.setState({ clickedPlayer: this.state.clickedPlayer.concat(id) });
 
-    //If you click on a player that has already been selected, the game is reset and cards shuffled.
-    if (playerAlreadyClicked) {
-      this.setState({
-        player: this.state.player.sort(function (a, b) {
-          return 0.5 - Math.random();
-        }),
-        clickedPlayer: [],
-        score: 0
-      });
-      alert("You lose. Play again?");
-
-      //if you click on an available player, your score is increased and cards shuffled.
     } else {
+      this.handleReset();
+    }
+  };
+
+
+
+   else {
       this.setState(
         {
           player: this.state.player.sort(function (a, b) {
@@ -45,7 +50,7 @@ class App extends Component {
           ),
           score: this.state.score + 1
         },
-        //if you get all 12 fish corrent you get a congrats message and the game resets        
+        //if you get all 12 players corrent you get a congrats message and the game resets        
         () => {
           if (this.state.score === 12) {
             alert("You are the Winner!");
@@ -63,7 +68,7 @@ class App extends Component {
   };
 
 
-  // Map over this.state.friends and render a FriendCard component for each friend object
+  // Map over this.state.friends and render a PlayerCard component for each player object
   render() {
     return (
       <Wrapper>
