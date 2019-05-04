@@ -1,4 +1,4 @@
-# Memory Game | 
+# Memory Game | Golden State Warriors
 
 is a simple memory game, built with React.js.
 
@@ -7,7 +7,6 @@ is a simple memory game, built with React.js.
 ## Description
 
 This full-stack game allows users to test their memory skills, while tracking their score each round.
-Click an image to start the game. Every time you click a new image, you get a point, and the images shuffle. If you click the same image twice, you lose the round and start over. Click all images once with no repeats, and you win the game!
 
 + Click an image to start the game
 
