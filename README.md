@@ -2,7 +2,7 @@
 
 is a simple memory game, built with React.js.
 
-<!-- [Sports Illustrated](https:// "Sports Illustrated") -->
+[Sports Illustrated](https://radiant-sierra-60802.herokuapp.com/ "Sports Illustrated")
 
 ## Description
 
