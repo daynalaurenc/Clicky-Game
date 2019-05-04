@@ -2,7 +2,7 @@
 
 is a simple memory game, built with React.js.
 
-[Sports Illustrated](https:// "Sports Illustrated")
+<!-- [Sports Illustrated](https:// "Sports Illustrated") -->
 
 ## Description
 
@@ -25,7 +25,7 @@ Click an image to start the game. Every time you click a new image, you get a po
 
 ![Clicky Game Screenshot](/public/images/screenshot.jpg)
 
-![Clicky Game Screenshot](/public/images/note.jpg)
+<!-- ![Clicky Game Screenshot](/public/images/note.jpg) -->
 
 ## Technology
 
